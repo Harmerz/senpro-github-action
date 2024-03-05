@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "main"
+      - "dev"
 
 jobs:
   test-build:
@@ -22,7 +23,8 @@ jobs:
           cache: "npm"
       - run: npm i
       - run: npm run build
-deploy:
+
+  deploy:
         needs: test-build
         runs-on: ubuntu-latest
       
