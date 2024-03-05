@@ -43,16 +43,16 @@ jobs:
                 eval "$(ssh-agent -s)"
                 ssh-add ~/.ssh/vm_senpro_modul2_43
                 echo "Checking project folder..."
-                [ ! -d "${HOME}/senpro/475357/modul02/senpro-github-action/" ] &&
+                [ ! -d "${HOME}/senpro/482625/modul02/senpro-github-action/" ] &&
                 {
                     echo "Repository not cloned. Cloning...";
-                    mkdir -p ~/senpro/475357/modul02;
-                    cd ~/senpro/475357/modul02;
-                    git clone https://github.com/annisauswa/senpro-github-action.git;
+                    mkdir -p ~/senpro/482625/modul02;
+                    cd ~/senpro/482625/modul02;
+                    git clone https://github.com/Harmerz/senpro-github-action.git;
                 } ||
                 {
                     echo "Repository already exists. Building...";
-                    cd ~/senpro/475357/modul02/senpro-github-action;
+                    cd ~/senpro/482625/modul02/senpro-github-action;
                     git restore .;
                     git pull origin main;
                 }
